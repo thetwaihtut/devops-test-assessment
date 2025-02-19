@@ -1,5 +1,15 @@
-DevOps - Test
+# DevOps - Test
 
+## Installation
+To install and set up the project locally, follow these steps:
+
+```bash
+# Clone the repository
+git clone https://github.com/thetwaihtut/devops-test-assessment.git
+
+# Navigate to the project directory
+cd devops-test-assessment
+```
 ## Application on Docker
 
 Development Environment
@@ -26,6 +36,12 @@ Navigate to the kubernetes/dev directory and apply all configurations:
 ```bash
 cd kubernetes/dev
 kubectl apply -f .
+```
+### Verify the Deployment
+To verify that the service is running, use the following command:
+
+```bash
+kubectl get services -n dev
 ```
 Notes
 
