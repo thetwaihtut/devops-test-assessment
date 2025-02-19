@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: app-prod
-          image: your-docker-registry/app:prod
+          image: thetwaihtut/app-prod:v1.0.0
           envFrom:
             - configMapRef:
                 name: app-config
