@@ -13,6 +13,7 @@ module "eks" {
   }
 
   vpc_id = module.vpc.vpc_id
+  cluster_security_group_id = aws_security_group.eks_cluster.id
   
 
   eks_managed_node_group_defaults = {
