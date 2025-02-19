@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: graphite-prod
+  namespace: prod
+spec:
+  selector:
+    app: graphite-prod
+  ports:
+  - protocol: UDP
+    port: 8125
+    name: statsd
+  - protocol: TCP
+    port: 2003
+    name: carbon-receiver-plaintext
+  - protocol: TCP
+    port: 2004
+    name: carbon-receiver-pickle
+  - protocol: TCP    
+    port: 2023
+    name: carbon-aggregator-plaintext
+  - protocol: TCP    
+    port: 2024
+    name: carbon-aggregator-pickle
+  - protocol: TCP     
+    port: 8126
+    name: statsd-admin

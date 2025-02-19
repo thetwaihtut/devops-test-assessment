@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-prod
+  namespace: prod
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-prod
+  template:
+    metadata:
+      labels:
+        app: app-prod
+    spec:
+      containers:
+        - name: app-prod
+          image: your-docker-registry/app:prod
+          envFrom:
+            - configMapRef:
+                name: app-config
