@@ -21,9 +21,9 @@ resource "local_file" "private_key" {
 }
 
 resource "aws_instance" "bastion" {
-  ami           = "ami-0cb91c7de36eed2cb" # Replace with your preferred AMI ID
+  ami           = "ami-04b4f1a9cf54c11d0" 
   instance_type = "t3.micro"
-  key_name      = aws_key_pair.key_pair.key_name # Replace with your key pair name
+  key_name      = aws_key_pair.key_pair.key_name 
 
   vpc_security_group_ids = [aws_security_group.bastion_sg.id]
 
