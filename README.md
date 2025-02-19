@@ -63,7 +63,8 @@ To set up the Terraform configuration, follow these steps:
 2. Initialize Terraform:
 
     ```bash
-    terraform init```
+    terraform init
+    ```
 
 3. Preview the Terraform configuration:
    
