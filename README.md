@@ -48,3 +48,33 @@ Notes
 * Ensure that the Kubernetes YAML files are correctly configured for your environment.
 * Ensure that your ```Dockerfile.dev``` is properly configured for their respective environments.
 
+## Terraform
+This project uses Terraform to provision an EKS cluster on AWS.
+
+### Set Up Terraform
+To set up the Terraform configuration, follow these steps:
+
+1. Navigate to the Terraform directory:
+
+    ```bash
+    cd Terraform
+    ```
+
+2. Initialize Terraform:
+
+    ```bash
+    terraform init```
+
+3. Preview the Terraform configuration:
+   
+    ```bash
+    terraform plan
+    ```
+  
+4. Apply the Terraform configuration:
+
+    ```bash
+    terraform apply --auto-approve
+    ```
+
+    This will provision the EKS cluster with the specified configuration.
