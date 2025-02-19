@@ -1,0 +1,16 @@
+{
+  "name": "devops-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"PASS\" && exit 0",
+    "dev": "npm run test && node index.js",
+	  "prod": "node index.js"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "lynx": "^0.2.0"
+  }
+}

@@ -1,0 +1,28 @@
+# Stage 1: Build Stage
+FROM node:22.14.0-alpine AS build
+
+# Set working directory
+WORKDIR /usr/src/app  
+
+# Install app dependencies
+COPY package*.json ./
+RUN npm install --quiet
+
+# Copy application source code
+COPY . .
+
+# Stage 2: Run Stage
+FROM node:22.14.0-alpine
+
+# Set working directory
+WORKDIR /usr/src/app
+
+# Copy only the necessary files from the build stage
+COPY --from=build /usr/src/app /usr/src/app
+
+# Use a non-root user
+USER node
+
+# Set the entrypoint and command
+ENTRYPOINT ["npm"]
+CMD ["run", "dev"]
