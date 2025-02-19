@@ -112,7 +112,7 @@ kubectl apply -f .
 To verify that the service is running, use the following command:
 
 ```bash
-kubectl get services -n dev
+kubectl get services -n prod
 ```
 Notes
 
