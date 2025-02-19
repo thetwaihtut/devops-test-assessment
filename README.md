@@ -105,7 +105,7 @@ Apply All Kubernetes Configurations
 Navigate to the kubernetes/dev directory and apply all configurations:
 
 ```bash
-cd kubernetes/dev
+cd kubernetes/prod
 kubectl apply -f .
 ```
 ### Verify the Deployment
