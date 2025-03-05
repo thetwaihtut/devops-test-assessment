@@ -1,14 +1,3 @@
-## Introduction
-
-This is a technical test for the role of **DevOps Engineer**.
-
-## Objectives
-
-This test helps us to understand
-- how do you approach infrastructure design
-- how do you manage microservices communication
-- how do you consider security implications
-
 ## Project Setup
 
 Project root has [`index.js`](/index.js) file. It simulates a simple app that runs infinitely & sends metrics to a [`statsd`](https://github.com/statsd/statsd) server.
